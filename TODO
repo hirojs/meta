@@ -1,0 +1,3 @@
+Feature dependency. It should be possible for a feature to say, "I require that any implementing metaclass also append this feature, with this configuration". There would need to be an element of topological sorting here I assume.
+
+Look into feature namespacing. I'd like to be able to name a feature 'core:methods'. Then, if I try to attach a feature called "methods" it should find 'core:methods', as long as there are no other features defined as '*:methods' (if there are, the feature name would have to be fully-qualified).
