@@ -8,7 +8,7 @@ function MetaClass(parent) {
 
 MetaClass.prototype.initializeInstance = function(instance) {
 	if (this._parent) {
-		this._parent.initializeInstance(this, instance);
+		this._parent.initializeInstance(instance);
 	}
 	for (let fn in this._attachedFeatures) {
 		this._attachedFeatures[fn].initializeInstance(this, instance);
